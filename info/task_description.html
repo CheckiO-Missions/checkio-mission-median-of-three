@@ -45,11 +45,13 @@ Iterable on ints.
 <pre class="brush: javascript">
 medianThree([1, 2, 3, 4, 5, 6, 7]) == [1, 2, 2, 3, 4, 5, 6]
 medianThree([1]) == [1]
+medianThree([-1, 0, 1]) == [-1, 0, 0]
 </pre>
 {% else %}
 <pre class="brush: python">
 list(median_three([1, 2, 3, 4, 5, 6, 7])) == [1, 2, 2, 3, 4, 5, 6]
 list(median_three([1])) == [1]
+list(median_three([-1, 0, 1])) == [-1, 0, 0]
 </pre>
 {% endif %}
 </div>
