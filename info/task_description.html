@@ -1,20 +1,37 @@
 <!-- Describe task in general -->
 
 <p>
-    Sum two passed ints
+Given 
+{% if interpreter.slug == "js-node" %}  an Array of integers {% else %}  an iterable of ints {% endif %}
+
+, create and return a new 
+
+{% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
+
+ whose first two elements are the same as in items , after which each element equals the median of the three elements in the original list ending in that position.
 </p>
 
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
-</p>
+<p>Wait... You don't know what is "median"? Go check a separate mission 
+
+<a href="{% if interpreter.slug == "js-node" %}https://js.checkio.org/en/mission/median/{% else %}https://py.checkio.org/en/mission/median/{% endif %}">"Median"</a>
+
+on CheckiO.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> {% if interpreter.slug == "js-node" %}
+Array of integers.
+    {% else %}
+Iterable on ints.
+    {% endif %}
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> {% if interpreter.slug == "js-node" %}
+Array of integers.
+    {% else %}
+Iterable on ints.
+    {% endif %}
 </p>
 
 
@@ -25,25 +42,17 @@
     </p>
 
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: javascript">
+medianThree([1, 2, 3, 4, 5, 6, 7]) == [1, 2, 2, 3, 4, 5, 6]
+medianThree([1]) == [1]
 </pre>
 {% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
+<pre class="brush: python">
+list(median_three([1, 2, 3, 4, 5, 6, 7])) == [1, 2, 2, 3, 4, 5, 6]
+list(median_three([1])) == [1]
 </pre>
 {% endif %}
 </div>
-<!-- Here you can explain how it can be used in development and what is usage of this. -->
-<!-- The section is optional -->
-<p class="for_info_only">
-    <strong>How it is used: </strong>
-    <i>(math is used everywhere)</i>
-</p>
 
-<!-- Here you can explain some constraints for input-->
-<!-- The section is optional -->
-<p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
-</p>
+
+<p><i>The mission was taken from Python CCPS 109 Fall 2018. It is taught for Ryerson Chang School of Continuing Education by <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
