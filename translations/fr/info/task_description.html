@@ -1,0 +1,60 @@
+<!-- Describe task in general -->
+
+<p>
+Etant donné
+{% if interpreter.slug == "js-node" %}  un tableau d'entiers {% else %}  un iterable d'entiers {% endif %}
+
+, créer et retourner un nouveau
+
+{% if interpreter.slug == "js-node" %} tableau {% else %} iterable {% endif %}
+
+ dont les deux premiers éléments sont les mêmes que l'entrée, après quoi chaque élément est égal à la médiane des trois éléments de la liste initiale, se terminant par cette position.
+</p>
+
+<p>Attends... Tu ne sais pas ce qu'est la "médiane" ? Va voir cette autre mission
+
+<a href="{% if interpreter.slug == "js-node" %}https://js.checkio.org/fr/mission/median/{% else %}https://py.checkio.org/fr/mission/median/{% endif %}">"Médiane"</a>
+
+sur CheckiO.</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Entrée: </strong> {% if interpreter.slug == "js-node" %}
+Tableau d'entiers.
+    {% else %}
+Iterable d'entiers.
+    {% endif %}
+</p>
+
+<p>
+    <strong>Sortie: </strong> {% if interpreter.slug == "js-node" %}
+Tableau d'entiers.
+    {% else %}
+Iterable d'entiers.
+    {% endif %}
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Examples :</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+medianThree([1, 2, 3, 4, 5, 6, 7]) == [1, 2, 2, 3, 4, 5, 6]
+medianThree([1]) == [1]
+medianThree([-1, 0, 1]) == [-1, 0, 0]
+</pre>
+{% else %}
+<pre class="brush: python">
+list(median_three([1, 2, 3, 4, 5, 6, 7])) == [1, 2, 2, 3, 4, 5, 6]
+list(median_three([1])) == [1]
+list(median_three([-1, 0, 1])) == [-1, 0, 0]
+</pre>
+{% endif %}
+</div>
+
+
+<p><i>La mission vient de "Python CCPS 109 Fall 2018". C'est enseigné à la Ryerson Chang School of Continuing Education par <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
