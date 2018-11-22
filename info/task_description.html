@@ -8,21 +8,21 @@ Given
 
 {% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
 
- whose first two elements are the same as in items , after which each element equals the median of the three elements in the original list ending in that position.
+ whose first two elements are the same as in items, after which each element equals the median of the three elements in the original list ending in that position.
 </p>
 
-<p>Wait... You don't know what is "median"? Go check a separate mission 
+<p>Wait... You don't know what the "median" is? Go check a separate 
 
 <a href="{% if interpreter.slug == "js-node" %}https://js.checkio.org/en/mission/median/{% else %}https://py.checkio.org/en/mission/median/{% endif %}">"Median"</a>
 
-on CheckiO.</p>
+Mission on CheckiO.</p>
 
 <!-- Explain input and output values -->
 <p>
     <strong>Input: </strong> {% if interpreter.slug == "js-node" %}
 Array of integers.
     {% else %}
-Iterable on ints.
+Iterable of ints.
     {% endif %}
 </p>
 
@@ -30,7 +30,7 @@ Iterable on ints.
     <strong>Output: </strong> {% if interpreter.slug == "js-node" %}
 Array of integers.
     {% else %}
-Iterable on ints.
+Iterable of ints.
     {% endif %}
 </p>
 
@@ -58,3 +58,4 @@ list(median_three([-1, 0, 1])) == [-1, 0, 0]
 
 
 <p><i>The mission was taken from Python CCPS 109 Fall 2018. It is taught for Ryerson Chang School of Continuing Education by <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+
