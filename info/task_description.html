@@ -1,36 +1,36 @@
 <!-- Describe task in general -->
 
 <p>
-给你一个
-{% if interpreter.slug == "js-node" %}  整数数组 {% else %}  整数列表 {% endif %}, 
+Given 
+{% if interpreter.slug == "js-node" %}  an Array of integers {% else %}  an iterable of ints {% endif %}, 
 
-你需要创建并返回一个
+create and return a new 
 
-{% if interpreter.slug == "js-node" %} 数组 {% else %} 列表 {% endif %}
+{% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
 
-其中前两个元素要和输入列表一致, 从第三个元素开始，要取输入列表的该位置前三个数的中位数。
+ whose first two elements are the same as in items, after which each element equals the median of the three elements in the original list ending in that position.
 </p>
 
-<p>等等...你不知道什么是‘中位数’? 那先来看看这个Checkio任务
+<p>Wait...You don't know what the "median" is? Go check out the separate 
 
 <a href="{% if interpreter.slug == "js-node" %}https://js.checkio.org/en/mission/median/{% else %}https://py.checkio.org/en/mission/median/{% endif %}">"Median"</a>
 
-.</p>
+mission on CheckiO.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>输入: </strong> {% if interpreter.slug == "js-node" %}
-整数数组。
+    <strong>Input: </strong> {% if interpreter.slug == "js-node" %}
+Array of integers.
     {% else %}
-整数列表。
+Iterable of ints.
     {% endif %}
 </p>
 
 <p>
-    <strong>输出: </strong> {% if interpreter.slug == "js-node" %}
-整数数组。
+    <strong>Output: </strong> {% if interpreter.slug == "js-node" %}
+Array of integers.
     {% else %}
-整数列表。
+Iterable of ints.
     {% endif %}
 </p>
 
@@ -38,7 +38,7 @@
 <!-- Put some usage examples -->
 <div class="for_info_only">
     <p>
-        <strong>举例:</strong>
+        <strong>Example:</strong>
     </p>
 
 {% if interpreter.slug == "js-node" %}
