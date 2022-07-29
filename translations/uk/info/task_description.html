@@ -1,0 +1,51 @@
+<!-- Describe task in general -->
+
+<p>
+Дано
+{% if interpreter.slug == "js-node" %}  масив з integers {% else %}  набір елементів з ints {% endif %},
+
+потрібно створити та повернути новий
+
+{% if interpreter.slug == "js-node" %} масив {% else %} набір елементів {% endif %}
+
+ у якому перші два елементи дорівнюють першим двум елементам items, після яких кожен наступний елемент дорівнює середньому елементу в сортованому списку з трьох елементів з оригінального списку items.
+
+ Третій елемент в сортованому списку - це поточна позиція (позиція 2 і далі), перший та другий елементи знаходяться пере третім в оригінальному списку items.
+</p>
+
+<p>Зачекай... Ти не знаєш що таке "median"? Перейди за посиланням та подивись
+
+<a href="https://{% if interpreter.slug == 'js-node' %}js{% else %}py{%endif %}.checkio.org/en/mission/median/">"Median"</a>
+
+місія на CheckiO.</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Вхідні дані: </strong> {% if interpreter.slug == "js-node" %}
+Масив integers.
+    {% else %}
+Набір елементів ints.
+    {% endif %}
+</p>
+
+<p>
+    <strong>Вихідні дані: </strong> {% if interpreter.slug == "js-node" %}
+Масив integers.
+    {% else %}
+Набір елементів ints.
+    {% endif %}
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Приклад:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+
+<p><i>Місія була взята з Python CCPS 109 Fall 2018. Її викладають для Школи безперервної освіти Райерсона Чанга <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+
