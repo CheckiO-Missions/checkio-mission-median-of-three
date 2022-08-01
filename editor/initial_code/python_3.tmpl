@@ -1,0 +1,23 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}from typing import Iterable{% endblock env %}
+
+{% block start %}
+def median_three(els: Iterable[int]) -> Iterable[int]:
+    # your code here
+    return []
+{% endblock start %}
+
+{% block example %}
+print('Example:')
+print(list(median_three([1, 2, 3, 4, 5, 6, 7])))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}median_three({{t.input|p_args}})
+{% endblock %} == {% block result %}{{t.answer|p}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The mission is done! Click 'Check Solution' to earn rewards!")
+{% endblock final %}

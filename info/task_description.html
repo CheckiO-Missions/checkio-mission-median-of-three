@@ -8,7 +8,13 @@ create and return a new
 
 {% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
 
- whose first two elements are the same as in items, after which each element equals the median of the three elements in the original list ending in that position.
+ whose first two elements are the same as in items, after which each element equals the median element in the sorted list of the three elements from the original list.
+
+ Third element in sorted list is current position (position 2 and go on), first two elements are going before the third element in the original list.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 365px"/>
 </p>
 
 <p>Wait...You don't know what the "median" is? Go check out the separate 
@@ -41,19 +47,7 @@ Iterable of ints.
         <strong>Example:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">
-medianThree([1, 2, 3, 4, 5, 6, 7]) == [1, 2, 2, 3, 4, 5, 6]
-medianThree([1]) == [1]
-medianThree([-1, 0, 1]) == [-1, 0, 0]
-</pre>
-{% else %}
-<pre class="brush: python">
-list(median_three([1, 2, 3, 4, 5, 6, 7])) == [1, 2, 2, 3, 4, 5, 6]
-list(median_three([1])) == [1]
-list(median_three([-1, 0, 1])) == [-1, 0, 0]
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 
