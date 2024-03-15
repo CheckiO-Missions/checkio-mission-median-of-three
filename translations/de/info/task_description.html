@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p>
+Gegeben 
+{% if interpreter.slug == "js-node" %} ein Array mit ganzen Zahlen {% else %} eine Iterable mit ganzen Zahlen {% endif %}, 
+
+erstellen und geben Sie ein neues 
+
+{% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
+
+ zurück, dessen erste beiden Elemente die gleichen sind wie in items. Danach entspricht jedes Element dem mittleren Element in der Liste der drei Elemente aus der ursprünglichen Liste.
+
+ Diese Dreierliste endet an der aktuellen Position, die ersten beiden Elemente gehen direkt vor das dritte Element.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 365px"/>
+</p>
+
+<p>Warten Sie... Sie wissen nicht, was der "Median" ist? Schauen Sie sich die separate 
+
+<a href="https://{% if interpreter.slug == 'js-node' %}js{% else %}py{%endif %}.checkio.org/en/mission/median/">"Median"</a>
+
+mission auf CheckiO.</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe: </strong> {% if interpreter.slug == "js-node" %}
+Array mit ganzen Zahlen.
+   {% else %}
+Iterable von Ints.
+   {% endif %}
+</p>
+
+<p>
+   <strong>Ausgabe: </strong> {% if interpreter.slug == "js-node" %}
+Array mit ganzen Zahlen.
+   {% else %}
+Iterable von Ints.
+   {% endif %}
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Beispiel:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+
+<p><i>Die Aufgabe wurde aus Python CCPS 109 Herbst 2018 übernommen. Sie wird für die Ryerson Chang School of Continuing Education unterrichtet von <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+
