@@ -1,0 +1,52 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何开始解决这个任务
+    </div>
+    <div class="answer">
+        首先，请阅读有关列表理解的信息<a target="_blank" href="https://docs.python.org/3.10/tutorial/datastructures.html?highlight=list%20comprehension">https://docs.python.org/3.10/tutorial/datastructures.html?highlight=list%20comprehension</a> 。
+     列表理解提供了一种创建列表的简洁方法。此外，阅读有关 "range() "的信息也可能对你有所帮助<a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=range#range">https://docs.python.org/3.10/library/stdtypes.html?highlight=range#range</a> 。
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我需要如何使用它的示例，谢谢
+    </div>
+    <div class="answer">
+        例如，如果您想创建这样一个列表"[0, 1, 2, 3, 4, 5, 6]"，您可以使用下一个表达式"[i for i in range(7)]"。
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我卡住了。我需要一点提示。我需要做什么？
+    </div>
+    <div class="answer">
+        您需要使用列表理解创建一个新列表。在"[i for i in range(7)]"中使用 els[i - 2]、els[i - 1]、els[i]代替 "i"，以获取一个元素和它前面的两个元素。
+        别忘了，你的三个元素列表必须从小到大排序。
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        我需要帮助。
+    </div>
+    <div class="answer">
+        您的代码必须是这样的
+       <pre class="brush: python">
+[sorted([els[i-2], els[i-1], els[i]])[1] for i in range(2, len(els))]
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        最终的代码应该是怎样的？
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def median_three(els: Iterable[int]) -> Iterable[int]:
+    return [els[0], els[1]] + [sorted([els[i-2], els[i-1], els[i]])[1] for i in range(2, len(els))] if len(els)> 2 else els
+        </pre>
+    </div>
+</div>
+
+
+</body>
