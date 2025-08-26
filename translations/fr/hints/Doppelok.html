@@ -1,0 +1,52 @@
+<body data-author="Doppelok">
+<div class="question-answer">
+    <div class="question">
+        Je n'ai aucune idée de la manière de résoudre cette mission
+    </div>
+    <div class="answer">
+        Tout d'abord, lisez ces informations sur les compréhensions de listes <a target="_blank" href="https://docs.python.org/3.10/tutorial/datastructures.html?highlight=list%20comprehension">https://docs.python.org/3.10/tutorial/datastructures.html?highlight=list%20comprehension</a>.
+     Les compréhensions de listes fournissent un moyen concis de créer des listes. Il peut également être utile pour vous de lire ces informations sur "range()" <a target="_blank" href="https://docs.python.org/3.10/library/stdtypes.html?highlight=range#range">https://docs.python.org/3.10/library/stdtypes.html?highlight=range#range</a>.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        J'ai besoin d'exemples d'utilisation, s'il vous plaît
+    </div>
+    <div class="answer">
+        Par exemple, si vous voulez créer une liste comme celle-ci "[0, 1, 2, 3, 4, 5, 6]", vous pouvez utiliser l'expression suivante "[i for i in range(7)]".
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        Je suis bloqué. J'ai besoin d'un petit conseil. Que dois-je faire?
+    </div>
+    <div class="answer">
+        Vous devez créer une nouvelle liste en utilisant les compréhensions de liste. Et utilisez un els[i - 2], els[i - 1], els[i] au lieu de "i" dans "[i for i in range(7)]" pour prendre un élément et deux éléments avant lui.
+        Et n'oubliez pas que votre liste de trois éléments doit être triée de la plus petite à la plus grande valeur.
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        J'ai besoin d'aide.
+    </div>
+    <div class="answer">
+        Votre code doit être le suivant:
+       <pre class="brush: python">
+[sorted([els[i-2], els[i-1], els[i]])[1] for i in range(2, len(els))]
+        </pre>
+    </div>
+</div>
+<div class="question-answer">
+    <div class="question">
+        A quoi doit ressembler le code final?...
+    </div>
+    <div class="answer">
+        <pre class="brush: python">
+def median_three(els: Iterable[int]) -> Iterable[int]:
+    return [els[0], els[1]] + [sorted([els[i-2], els[i-1], els[i]])[1] for i in range(2, len(els))] if len(els)> 2 else els
+        </pre>
+    </div>
+</div>
+
+
+</body>
