@@ -1,43 +1,43 @@
 <!-- Describe task in general -->
 
 <p>
-Дано
-{% if interpreter.slug == "js-node" %}  масив з integers {% else %}  набір елементів з ints {% endif %},
+Дано 
+{% if interpreter.slug == "js-node" %} масив цілих чисел {% else %} ітерабельний список ints {% endif %}, 
 
-потрібно створити та повернути новий
+створити та повернути новий 
 
-{% if interpreter.slug == "js-node" %} масив {% else %} набір елементів {% endif %}
+{% if interpreter.slug == "js-node" %} Масив {% else %}, що повторюється {% endif %}
 
- у якому перші два елементи дорівнюють першим двум елементам items, після яких кожен наступний елемент дорівнює середньому елементу в сортованому списку з трьох елементів з оригінального списку items.
+ перші два елементи якого такі ж, як і в items, після чого кожен елемент дорівнює середньому елементу в списку з трьох елементів з вихідного списку.
 
- Третій елемент в сортованому списку - це поточна позиція (позиція 2 і далі), перший та другий елементи знаходяться перед третім в оригінальному списку items.
+ Цей список з трьох елементів закінчується на поточній позиції, перші два елементи йдуть безпосередньо перед третім елементом.
 </p>
 
 <p style="text-align: center;">
     <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 365px"/>
 </p>
 
-<p>Зачекай... Ти не знаєш що таке "median"? Перейди за посиланням та подивись
+<p>Зачекайте... Ви не знаєте, що таке "медіана"? Перегляньте окрему статтю 
 
 <a href="https://{% if interpreter.slug == 'js-node' %}js{% else %}py{%endif %}.checkio.org/en/mission/median/">"Median"</a>
 
-місія на CheckiO.</p>
+місію на CheckiO.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Вхідні дані: </strong> {% if interpreter.slug == "js-node" %}
-Масив integers.
-    {% else %}
-Набір елементів ints.
-    {% endif %}
+   <strong>Вхід: </strong> {% if interpreter.slug == "js-node" %}
+Масив цілих чисел.
+   {% else %}
+Ітерабельний масив інтів.
+   {% endif %}
 </p>
 
 <p>
-    <strong>Вихідні дані: </strong> {% if interpreter.slug == "js-node" %}
-Масив integers.
-    {% else %}
-Набір елементів ints.
-    {% endif %}
+   <strong>Вихідні дані: </strong> {% if interpreter.slug == "js-node" %}
+Масив цілих чисел.
+   {% else %}
+Ітерабельний масив цілих чисел.
+   {% endif %}
 </p>
 
 
@@ -51,5 +51,5 @@
 </div>
 
 
-<p><i>Місія була взята з Python CCPS 109 Fall 2018. Її викладають для Школи безперервної освіти Райерсона Чанга <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+<p><i>Місія взята з Python CCPS 109 Fall 2018. Його викладають для Школи безперервної освіти Райерсона Чанга (Ryerson Chang School of Continuing Education) <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
 
