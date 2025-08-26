@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p>
+给定 
+{% if interpreter.slug == "js-node" %} 一个整数数组{% else %} 一个可迭代的整数{% endif %} 、 
+
+创建并返回一个新的 
+
+{% if interpreter.slug == "js-node" %} 数组{% else %} iterable{% endif %}
+
+ 的前两个元素与 items 中的元素相同，之后每个元素都等于原始列表中三个元素的中位数。
+
+ 这个三元素列表在当前位置结束，前两个元素刚好位于第三个元素之前。
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 365px"/>
+</p>
+
+<p>等等......你不知道什么是 "中位数"？去看看单独的 
+
+<a href="https://{% if interpreter.slug == 'js-node' %}js{% else %}py{%endif %}.checkio.org/en/mission/median/">"Median"</a>
+
+任务。</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入： </strong> {% if interpreter.slug == "js-node" %}
+整数数组。
+   {% else %}
+可迭代的整数
+   {% endif %}
+</p>
+
+<p>
+   <strong>输出： </strong> {% if interpreter.slug == "js-node" %}
+整数数组
+   {% else %}
+可迭代的 ints
+   {% endif %}
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>示例：</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+
+<p><i>该任务选自 Python CCPS 109 Fall 2018。该课程由以下人员为张瑞森继续教育学院讲授<a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+
