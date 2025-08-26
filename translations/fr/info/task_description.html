@@ -1,53 +1,55 @@
 <!-- Describe task in general -->
 
 <p>
-Given
-{% if interpreter.slug == "js-node" %}  an Array of integers {% else %}  an iterable of ints {% endif %},
+Étant donné 
+{% if interpreter.slug == "js-node" %} un tableau d'entiers {% else %} un itérable d'entiers {% endif %}, 
 
-create and return a new
+créez et renvoyez un nouveau 
 
-{% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
+{% if interpreter.slug == "js-node" %} Tableau {% else %} itérable {% endif %}
 
- whose first two elements are the same as in items, after which each element equals the medium element in the sorted list of the three elements from the original list.
+ dont les deux premiers éléments sont les mêmes que dans items, après quoi chaque élément est égal à l'élément médian de la liste des trois éléments de la liste originale.
 
- Third element in sorted list is current position (position 2 and go on), first two elements are going before the third element in the original list.
+ Cette liste de trois éléments se termine à la position courante, les deux premiers éléments passant juste avant le troisième élément.
 </p>
 
 <p style="text-align: center;">
     <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 365px"/>
 </p>
 
-<p>Attends... Tu ne sais pas ce qu'est la "médiane" ? Va voir cette autre mission
+<p>Attendez... Vous ne savez pas ce qu'est la "médiane"? Allez voir le document séparé 
 
-<a href="{% if interpreter.slug == "js-node" %}https://js.checkio.org/fr/mission/median/{% else %}https://py.checkio.org/fr/mission/median/{% endif %}">"Médiane"</a>
+<a href="https://{% if interpreter.slug == 'js-node' %}js{% else %}py{%endif %}.checkio.org/en/mission/median/">"Median"</a>
 
 sur CheckiO.</p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Entrée: </strong> {% if interpreter.slug == "js-node" %}
+   <strong>Entrée: </strong> {% if interpreter.slug == "js-node" %}
 Tableau d'entiers.
-    {% else %}
-Iterable d'entiers.
-    {% endif %}
+   {% else %}
+Itérable d'entiers.
+   {% endif %}
 </p>
 
 <p>
-    <strong>Sortie: </strong> {% if interpreter.slug == "js-node" %}
+   <strong>Sortie: </strong> {% if interpreter.slug == "js-node" %}
 Tableau d'entiers.
-    {% else %}
-Iterable d'entiers.
-    {% endif %}
+   {% else %}
+Itérable d'entiers.
+   {% endif %}
 </p>
+
 
 <!-- Put some usage examples -->
 <div class="for_info_only">
     <p>
-        <strong>Examples :</strong>
+        <strong>Exemple:</strong>
     </p>
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 
-<p><i>La mission vient de "Python CCPS 109 Fall 2018". C'est enseigné à la Ryerson Chang School of Continuing Education par <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+<p><i>La mission est tirée du cours Python CCPS 109 Fall 2018. Elle est enseignée pour l'école d'éducation permanente Ryerson Chang par <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+
