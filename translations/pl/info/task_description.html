@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p>
+Biorąc pod uwagę 
+{% if interpreter.slug == "js-node" %} tablicę liczb całkowitych {% else %} iterowalną tablicę liczb całkowitych {% endif %}, 
+
+proszę utworzyć i zwrócić nową 
+
+{% if interpreter.slug == "js-node" %} Array {% else %} iterable {% endif %}
+
+ której pierwsze dwa elementy są takie same jak w items, po czym każdy element jest równy środkowemu elementowi na liście trzech elementów z oryginalnej listy.
+
+ Ta lista trzech elementów kończy się na bieżącej pozycji, pierwsze dwa elementy idą tuż przed trzecim elementem.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 365px"/>
+</p>
+
+<p>Proszę poczekać... Nie wie Pan czym jest "mediana"? Proszę sprawdzić osobny artykuł 
+
+<a href="https://{% if interpreter.slug == 'js-node' %}js{% else %}py{%endif %}.checkio.org/en/mission/median/">"Median"</a>
+
+misję na CheckiO.</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Dane wejściowe: </strong> {% if interpreter.slug == "js-node" %}
+Tablica liczb całkowitych.
+   {% else %}
+Iterable of ints.
+   {% endif %}
+</p>
+
+<p>
+   <strong>Wyjście: </strong> {% if interpreter.slug == "js-node" %}
+Tablica liczb całkowitych.
+   {% else %}
+Iterable of ints.
+   {% endif %}
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Przykład:</strong>
+    </p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+
+<p><i>Misja została zaczerpnięta z Python CCPS 109 Fall 2018. Jest on prowadzony dla Ryerson Chang School of Continuing Education przez <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i></p>
+
